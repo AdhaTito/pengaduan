@@ -35,6 +35,16 @@ It should work on 5.3.7 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
 
+*************** PENTING ****************
+Login Admin 
+username : admin
+password : admin
+
+Login User 
+username : adhatito
+passwword : tito050301
+*****************************************
+
 ************
 Installation
 ************
