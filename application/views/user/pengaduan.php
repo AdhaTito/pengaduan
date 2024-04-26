@@ -46,6 +46,7 @@
                                     <th>No.</th>
                                     <th>Judul Pengaduan</th>
                                     <th>Isi Pengaduan</th>
+                                    <th>Bukti Foto</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -62,6 +63,7 @@
                                         <td><?= $num + 1; ?></td>
                                         <td><?= $row['judul_pengaduan']; ?></td>
                                         <td class="text-justify"><?= $row['isi_pengaduan']; ?></td>
+                                        <td>foto</td>
                                         <td class="status"><?= $row['status_pengaduan'] == 0 ? '<span class="badge-warning p-1 rounded-sm">antrian</span>' : ($row['status_pengaduan'] == 1 ? '<span class="badge-blue p-1 rounded-sm">proses</span>' : ($row['status_pengaduan'] == 2 ? '<span class="badge-success p-1 rounded-sm">selesai</span>' : '<span class="badge-danger p-1 rounded-sm">batal</span>')) ?></td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -110,9 +112,14 @@
                     <input type="text" name="judul_pengaduan" id="judul" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label for="telp">No. Telp / Whatsapp</label>
+                    <input name="no_telp" class="form-control" id="no_telp" cols="30" rows="4" placeholder="08XX - XXXX"></input>
+                </div>
+                <div class="form-group">
                     <label for="isi">Isi</label>
                     <textarea name="isi_pengaduan" id="isi" class="form-control" cols="30" rows="5"></textarea>
                 </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -161,6 +168,7 @@
                 $('.modal-body #id').val(cb.data('id'))
                 $('.modal-body #judul').val(cb.data('judul'))
                 $('.modal-body #isi').val(cb.data('isi'))
+                $('.modal-body #telp').val(cb.data('no_telp'))
             }
         })
 

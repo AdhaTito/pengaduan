@@ -4,9 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Menu_model extends CI_Model
 {
     // Field yang orderable
-    var $column_order = [null, 'tgl_pengaduan',  'nama_instansi', 'status_pengaduan', null];
+    var $column_order = [null, 'tgl_pengaduan',  'nama_instansi', 'status_pengaduan', 'no_telp'];
     // field yang diizinkan utk pencarian data
-    var $column_search = ['judul_pengaduan', 'tgl_pengaduan', 'nama_instansi', 'isi_pengaduan'];
+    var $column_search = ['judul_pengaduan', 'tgl_pengaduan', 'nama_instansi', 'isi_pengaduan', 'no_telp'];
     // default order by (tgl pengaduan yang terbaru)
     var $order = ['tgl_pengaduan' => 'desc'];
 

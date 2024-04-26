@@ -36,7 +36,7 @@ class Menu extends CI_Controller
                 $row = [];
 
                 // tombol action
-                $btnAction = "<button type=\"button\" data-toggle=\"modal\" data-target=\"#detail-pengaduan\" class='btn btn-sm btn-info btn-hapus' data-id=\"$field->id\" data-tgl=\"" . date('d F Y', strtotime($field->tgl_pengaduan)) . "\" data-instansi=\"$field->nama_instansi\" data-judul=\"$field->judul_pengaduan\" data-isi=\"$field->isi_pengaduan\" data-status=\"$field->status_pengaduan\"><i class=\"fas fa-fw fa-edit\"></i> Detail</button>
+                $btnAction = "<button type=\"button\" data-toggle=\"modal\" data-target=\"#detail-pengaduan\" class='btn btn-sm btn-info btn-hapus' data-id=\"$field->id\" data-tgl=\"" . date('d F Y', strtotime($field->tgl_pengaduan)) . "\" data-instansi=\"$field->nama_instansi\" data-judul=\"$field->judul_pengaduan\" data-isi=\"$field->isi_pengaduan\" data-telp=\"$field->no_telp\" data-status=\"$field->status_pengaduan\"><i class=\"fas fa-fw fa-edit\"></i> Detail</button>
                 <button type=\"button\" data-toggle=\"modal\" data-target=\"#hapus-pengaduan\" class='btn btn-sm btn-danger btn-hapus' data-id=\"$field->id\"><i class=\"fas fa-fw fa-trash-alt\"></i> Hapus</button>";
 
                 $status = $field->status_pengaduan;

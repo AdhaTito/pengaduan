@@ -111,6 +111,14 @@
                             <td class="status"></td>
                         </tr>
                         <tr>
+                            <td>No.Telp / Whatsapp</td>
+                            <td class="telp"></td>
+                        </tr>
+                        <tr>
+                            <td>Bukti Foto TimeStamp</td>
+                            <td class="image"></td>
+                        </tr>
+                        <tr>
                             <td>Ubah Status</td>
                             <td>
                                 <select name="status_pengaduan" id="status" class="form-control" required>
@@ -233,6 +241,7 @@
             $(".modal-body #id_pengaduan").val($(this).data('id'))
             $(".modal-body table .tgl").html($(this).data('tgl'))
             $(".modal-body table .instansi").html($(this).data('instansi'))
+            $(".modal-body table .telp").html($(this).data('telp'))
             $(".modal-body table .judul").html($(this).data('judul'))
             $(".modal-body table .isi").html($(this).data('isi'))
             $(".modal-body table .status").html(status)

@@ -44,16 +44,29 @@ class User extends CI_Controller
 
     public function tambah_data_aksi()
     {
+        
         if ($this->input->is_ajax_request() == true) {
+            //konfigurasi sebelum gambar diupload
+            $config['upload_path'] = './assets/img/upload/';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+            $config['max_size'] = '3000';
+            $config['max_width'] = '10024';
+            $config['max_height'] = '10000';
+            $config['file_name'] = 'img' . time();
+    
+            $this->load->library('upload', $config);
+            
             $this->form_validation->set_rules('judul_pengaduan', 'Judul pengaduan', 'required|max_length[128]');
             $this->form_validation->set_rules('isi_pengaduan', 'Isi pengaduan', 'required');
-
+            $this->form_validation->set_rules('no_telp', 'No Telp', 'required|numeric|max_length[15]');
+            
             $this->form_validation->set_error_delimiters('', '');
 
             if ($this->form_validation->run() == false) {
                 $errors = [
                     'judul_pengaduan' => form_error('judul_pengaduan'),
                     'isi_pengaduan' => form_error('isi_pengaduan'),
+                    'no_telp' => form_error('no_telp'),
                 ];
 
                 $data = [
@@ -63,7 +76,13 @@ class User extends CI_Controller
 
                 $this->output->set_content_type('application/json')->set_output(json_encode($data));
             } else {
-                $this->model->tambah_data();
+                if ($this->upload->do_upload('image')) {    
+                    $image = $this->upload->data();
+                    $gambar = $image['file_name'];
+                } else {
+                    $gambar = '';
+                }   
+                $this->model->tambah_data($gambar);
                 $data['status'] = TRUE;
                 $this->output->set_content_type('application/json')->set_output(json_encode($data));
             }

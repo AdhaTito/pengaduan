@@ -24,7 +24,7 @@
 <body class="bg-gradient-primary">
 
     <div class="btn btn-light m-5">
-        <a class="text-decoration-none text-primary" href="<?= base_url('/'); ?>">Kembali</a>
+        <a class="text-decoration-none text-primary" href="<?= base_url('/'); ?>">Kembali Ke Home</a>
     </div>
     <div class="container">
         <!-- Outer Row -->
@@ -45,7 +45,7 @@
                                     <div class="col-lg-7">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 my-2">Layanan Pengaduan Online Kelurahan ....</h1>
+                                                <h1 class="h4 text-gray-900 my-2 mb-4">Layanan Pengaduan Online Kelurahan Grogol Utara</h1>
                                             </div>
                                             <!-- Show Flash_msg --> 
                                             <?= $this->session->flashdata('message') ?>
@@ -71,7 +71,7 @@
                                                     Login
                                                 </button>
                                                 <?= form_close(); ?>
-                                                <p class="text-center pt-4">Buat Akun terlebih dahulu jika belum punya Akun</p>
+                                                <p class="text-center pt-4">Belum punya Akun? Klik tombol Registrasi</p>
 
                                                 <button class="btn btn-warning btn-user btn-block rounded-pill">
                                                         <a class="text-white text-decoration-none" href="<?= base_url('auth/registrasi'); ?>">Registrasi</a>
