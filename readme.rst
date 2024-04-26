@@ -38,11 +38,11 @@ issues, as well as missing features.
 ********************
 PENTING
 ********************
--  Login Admin 
+-  Login Admin =
 username : admin
 password : admin
 
--  Login User
+-  Login User =
 username : adhatito
 passwword : tito050301
 
