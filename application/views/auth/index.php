@@ -33,7 +33,6 @@
             <div class="col-xl-10 col-lg-12 col-md-9">
                 <div class="card o-hidden border-0 shadow-lg my-5 mx-auto" style="width: 80%;">
                     <div class="card-body p-0">
-
                         <div class="card o-hidden border-0 shadow-lg">
                             <div class="card-body p-0">
                                 <!-- Nested Row within Card Body -->
@@ -76,19 +75,15 @@
                                                 <button class="btn btn-warning btn-user btn-block rounded-pill">
                                                         <a class="text-white text-decoration-none" href="<?= base_url('auth/registrasi'); ?>">Registrasi</a>
                                                 </button>
-                                                
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 

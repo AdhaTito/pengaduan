@@ -61,12 +61,12 @@ class Auth extends CI_Controller
         }
     }
 
+
+
     public function registrasi()
     {
-        if ($this->session->userdata('email')) {
-            redirect('user');
-        }
-        $this->form_validation->set_rules('nama_instansi', 'Nomor NIK', 'required');
+        
+        $this->form_validation->set_rules('nama_instansi', 'Nomor NIK', 'required|is_unique[user.nama_instansi]|callback_check_nik');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('username', 'Username', 'required|is_unique[user.username]');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
@@ -100,6 +100,15 @@ class Auth extends CI_Controller
         }
     }
 
+    public function check_nik($nama_instansi) {
+        if (substr($nama_instansi, 0, 4) !== '3174') {
+            // Jika kode anggota tidak berawalan "3174", kembalikan pesan error
+            $this->form_validation->set_message('check_nik', 'NIK harus dari warga kelurahan Grogol Utara');
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
     // public function registrasi()
     // {
     //     /*

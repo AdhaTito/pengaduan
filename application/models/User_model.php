@@ -50,18 +50,11 @@ class User_model extends CI_Model
         }
     }
 
-    public function tambah_data($gambar = null)
+    public function tambah_data($data = null)
     {
         
-        $data = [
-            'instansi_id' => $this->user['id'],
-            'tgl_pengaduan' => date('Y-m-d'),
-            'judul_pengaduan' => htmlspecialchars($this->input->post('judul_pengaduan', true)),
-            'isi_pengaduan' => htmlspecialchars($this->input->post('isi_pengaduan', true)),
-            'no_telp' => htmlspecialchars($this->input->post('no_telp', true)),
-            'image' => htmlspecialchars($gambar),
-        ];
-
+        
+            // var_dump($data);
             $this->db->insert('pengaduan', $data);
             $this->session->set_flashdata('msg', 'submit.');
         
