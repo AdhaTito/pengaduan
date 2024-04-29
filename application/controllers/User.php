@@ -46,21 +46,21 @@ class User extends CI_Controller
     {
         
         if ($this->input->is_ajax_request() == true) {
+            $this->form_validation->set_rules('judul_pengaduan', 'Judul pengaduan', 'required|max_length[128]');
+            $this->form_validation->set_rules('isi_pengaduan', 'Isi pengaduan', 'required');
+            $this->form_validation->set_rules('no_telp', 'No Telp', 'required|numeric|max_length[15]');
+            
+            $this->form_validation->set_error_delimiters('', '');
+
             //konfigurasi sebelum gambar diupload
             $config['upload_path'] = './assets/img/upload/';
             $config['allowed_types'] = 'jpg|png|jpeg';
             $config['max_size'] = '3000';
             $config['max_width'] = '10024';
             $config['max_height'] = '10000';
-            $config['file_name'] = 'img' . time();
-    
+            $config['file_name'] = 'img' . date('Y-m-d');
+            
             $this->load->library('upload', $config);
-            
-            $this->form_validation->set_rules('judul_pengaduan', 'Judul pengaduan', 'required|max_length[128]');
-            $this->form_validation->set_rules('isi_pengaduan', 'Isi pengaduan', 'required');
-            $this->form_validation->set_rules('no_telp', 'No Telp', 'required|numeric|max_length[15]');
-            
-            $this->form_validation->set_error_delimiters('', '');
 
             if ($this->form_validation->run() == false) {
                 $errors = [
@@ -68,13 +68,12 @@ class User extends CI_Controller
                     'isi_pengaduan' => form_error('isi_pengaduan'),
                     'no_telp' => form_error('no_telp'),
                 ];
-
                 $data = [
                     'status' => FALSE,
                     'errors' => $errors
                 ];
-
                 $this->output->set_content_type('application/json')->set_output(json_encode($data));
+
             } else {
                 if ($this->upload->do_upload('image')) {    
                     $image = $this->upload->data();
@@ -82,7 +81,16 @@ class User extends CI_Controller
                 } else {
                     $gambar = '';
                 }   
-                $this->model->tambah_data($gambar);
+                $data = [
+                    'instansi_id' => $this->user['id'],
+                    'tgl_pengaduan' => date('Y-m-d'),
+                    'judul_pengaduan' => htmlspecialchars($this->input->post('judul_pengaduan', true)),
+                    'isi_pengaduan' => htmlspecialchars($this->input->post('isi_pengaduan', true)),
+                    'no_telp' => htmlspecialchars($this->input->post('no_telp', true)),
+                    'image' => htmlspecialchars($gambar),
+                ];
+                // var_dump($data);
+                $this->model->tambah_data($data);
                 $data['status'] = TRUE;
                 $this->output->set_content_type('application/json')->set_output(json_encode($data));
             }

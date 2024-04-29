@@ -55,7 +55,7 @@
                                     <tr>
                                         <td>
                                             <?php if ($row['status_pengaduan'] == 0) : ?>
-                                                <input type="checkbox" data-id="<?= $row['id'] ?>" data-judul="<?= $row['judul_pengaduan'] ?>" data-isi="<?= $row['isi_pengaduan'] ?>">
+                                                <input type="checkbox" data-id="<?= $row['id'] ?>" data-judul="<?= $row['judul_pengaduan'] ?>" data-isi="<?= $row['isi_pengaduan'] ?>" data-telp="<?= $row['no_telp'] ?>">
                                             <?php else : ?>
                                                 <span><i class="fa fa-check"></i></span>
                                             <?php endif; ?>
@@ -63,7 +63,12 @@
                                         <td><?= $num + 1; ?></td>
                                         <td><?= $row['judul_pengaduan']; ?></td>
                                         <td class="text-justify"><?= $row['isi_pengaduan']; ?></td>
-                                        <td>foto</td>
+                                        <td>
+                                            <picture>
+                                                <source srcset="" type="image/svg+xml">  
+                                                <img src="<?= base_url('assets/img/upload/') . $row['image'];?>" style="max-width: 50%; height: 70%;" class="img-fluid img-thumbnail" alt="...">
+                                            </picture>
+                                        </td>
                                         <td class="status"><?= $row['status_pengaduan'] == 0 ? '<span class="badge-warning p-1 rounded-sm">antrian</span>' : ($row['status_pengaduan'] == 1 ? '<span class="badge-blue p-1 rounded-sm">proses</span>' : ($row['status_pengaduan'] == 2 ? '<span class="badge-success p-1 rounded-sm">selesai</span>' : '<span class="badge-danger p-1 rounded-sm">batal</span>')) ?></td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -113,7 +118,7 @@
                 </div>
                 <div class="form-group">
                     <label for="telp">No. Telp / Whatsapp</label>
-                    <input name="no_telp" class="form-control" id="no_telp" cols="30" rows="4" placeholder="08XX - XXXX"></input>
+                    <input name="no_telp" class="form-control" id="telp" cols="30" rows="4" ></input>
                 </div>
                 <div class="form-group">
                     <label for="isi">Isi</label>
@@ -168,7 +173,7 @@
                 $('.modal-body #id').val(cb.data('id'))
                 $('.modal-body #judul').val(cb.data('judul'))
                 $('.modal-body #isi').val(cb.data('isi'))
-                $('.modal-body #telp').val(cb.data('no_telp'))
+                $('.modal-body #telp').val(cb.data('telp'))
             }
         })
 
