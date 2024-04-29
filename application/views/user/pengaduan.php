@@ -1,6 +1,9 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
+    <div class=" mb-4 alert alert-secondary" role="alert">
+        <h4 class="fw-bold "><i class="fas fa-exclamation-circle text-warning"></i> Pengaduan yang sudah diproses tidak bisa kamu ubah</h4>
+    </div>
     <!-- .row -->
     <div class="row">
         <!-- .col -->
@@ -36,6 +39,9 @@
             <div class="card shadow">
                 <div class="card-header">
                     <button type="button" type="button" class="btn btn-primary btn-ubah"><i class="fa fa-edit"></i> Ubah Data</button>
+                    <li class="mx-2 mt-2">
+                        <i>Checklis Pengaduan untuk ubah data</i>
+                    </li>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive shadow-sm">

@@ -50,6 +50,13 @@
 
   <?php else : ?>
 
+    <!-- Menu Berita -->
+    <li class="nav-item">
+      <a class="nav-link" href="<?= base_url('berita-lurah'); ?>">
+        <i class="far fa-newspaper"></i>
+        <span>Berita Lurah</span></a>
+    </li>
+
     <!-- Menu Pengaduan -->
     <li class="nav-item">
       <a class="nav-link" href="<?= base_url('daftar-pengaduan'); ?>">

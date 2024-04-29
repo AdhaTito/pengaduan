@@ -109,39 +109,6 @@ class Auth extends CI_Controller
             return TRUE;
         }
     }
-    // public function registrasi()
-    // {
-    //     /*
-    //         Validasi field {
-    //             required => semua field harus diisi
-    //             is_unique => field harus unik (tidak boleh sama)
-    //             min_length => minimal panjang karakter
-    //             matches => harus sama
-    //             email => harus memakai @provider.com
-    //         }
-    //     */
-    //     $this->form_validation->set_rules('nama_instansi', 'Nama Instansi', 'required');
-    //     $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-    //     $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-    //     $this->form_validation->set_rules('username', 'Username', 'required|is_unique[user.username]');
-    //     $this->form_validation->set_rules('pass1', 'Password', 'required|min_length[8]');
-    //     $this->form_validation->set_rules('pass2', 'Konfirmasi Password', 'required|matches[pass1]');
-
-    //     // Jika validasi gagal
-    //     if ($this->form_validation->run() == FALSE) {
-    //         $data = [
-    //             'judul' => 'Registrasi',
-    //             // 'user' => $this->user
-    //         ];
-
-    //         $this->templating->load('auth/registrasi', $data);
-    //         // $this->templating->load('auth/registerasi', $data);
-    //         // jika lolos validasi
-    //     } else {
-    //         // tambah data ke database
-    //         $this->model->registrasi();
-    //     }
-    // }
 
     public function logout()
     {

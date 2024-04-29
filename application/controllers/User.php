@@ -42,6 +42,17 @@ class User extends CI_Controller
         $this->templating->load('user/tambah', $data);
     }
 
+    public function berita()
+    {
+        is_admin();
+        $data = [
+            'judul' => 'Berita Kelurahan',
+            'user' => $this->user
+        ];
+
+        $this->templating->load('user/berita', $data);
+    }
+
     public function tambah_data_aksi()
     {
         

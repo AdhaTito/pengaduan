@@ -1,0 +1,44 @@
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.bg-hero {
+  background-image: url("./aset/img/bg-2.png");
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  /* filter: blur(2px); */
+}
+
+.text-xl {
+  font-weight: bolder;
+  font-size: large !important;
+}
+
+.img-card {
+  opacity: 80%;
+}
+
+.card {
+  box-shadow: 20px !important;
+}

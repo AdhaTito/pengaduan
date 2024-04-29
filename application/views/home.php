@@ -8,7 +8,7 @@
   <title>LAPOR LURAH</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <link rel="icon" href="<?=base_url()?>/assets/logo pengaduan.png" type="image/gif">
   <!-- Favicons -->
   <link href="<?= base_url() ?>/aset/img/apple-touch-icon.png" rel="apple-touch-icon">
 

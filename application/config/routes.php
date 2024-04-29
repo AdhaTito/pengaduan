@@ -63,6 +63,7 @@ $route['laporan-pengaduan'] = 'menu/laporan';
 
 $route['daftar-pengaduan'] = 'user/read_data';
 $route['tambah-pengaduan'] = 'user/tambah_data';
+$route['berita-lurah'] = 'user/berita';
 $route['ubah-password'] = 'user/ubah_password';
 
 $route['notfound'] = 'auth/notfound';
