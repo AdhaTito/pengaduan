@@ -111,12 +111,13 @@
                             <td class="status"></td>
                         </tr>
                         <tr>
-                            <td>No.Telp / Whatsapp</td>
+                            <td>No.Telp/WA</td>
                             <td class="telp"></td>
                         </tr>
                         <tr>
-                            <td>Bukti Foto TimeStamp</td>
-                            <td class="image"></td>
+                            <td>Bukti TimeStamp</td>
+                            <td class="image">
+                            </td>
                         </tr>
                         <tr>
                             <td>Ubah Status</td>
@@ -237,7 +238,11 @@
         $(document).on("click", ".btn-hapus", function() {
             let status = $(this).data('status')
             status == 0 ? status = 'antrian' : (status == 1 ? status = 'proses' : (status == 2 ? status = 'selesai' : status = 'gagal'))
-
+            // Mendapatkan URL gambar dari atribut data
+            let images = $(this).data('image'); 
+            let imageUrl = "<?php echo base_url('./assets/img/upload/'); ?>" + images;
+            console.log(imageUrl); // Mengecek URL gambar di console
+            
             $(".modal-body #id_pengaduan").val($(this).data('id'))
             $(".modal-body table .tgl").html($(this).data('tgl'))
             $(".modal-body table .instansi").html($(this).data('instansi'))
@@ -245,6 +250,7 @@
             $(".modal-body table .judul").html($(this).data('judul'))
             $(".modal-body table .isi").html($(this).data('isi'))
             $(".modal-body table .status").html(status)
+            $(".modal-body .image").html(`<img src="${imageUrl}" style="max-width: 100%; height: auto;" alt="Gambar Pengaduan">`);
         })
 
         $(document).on("click", ".btn-hapus", function() {

@@ -44,7 +44,7 @@
 <!--
 For IE support of object-fit add this to your document
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"&gt;&lt;/script&gt;
--->
+ -->
 
 
 </div>
@@ -61,7 +61,7 @@ For IE support of object-fit add this to your document
             </div>
 
             <?= form_open_multipart ('user/tambah_data_aksi', ['id' => 'formTambahData']); ?>
-            <form method="post" action="<?= base_url() ?>" enctype="multipart/form-data">
+            <form method="post" action="<?= base_url('tambah-pengaduan') ?>" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="judul_pengaduan">Judul Pengaduan</label>
@@ -80,8 +80,9 @@ For IE support of object-fit add this to your document
                     </div>
                     <div class="form-group">
                         <label for="image">Bukti Foto TimeStamp</label>
-                        <input type="file" name="image" class="form-control" id="image" cols="30" rows="4" >Max ukuran image 3MB</input>
-                        <div class="invalid-feedback"></div>
+                        <input type="file" name="image" class="form-control" id="image" cols="30" rows="4" >
+                        Image harus dari TimeStamp, jika tidak kami tolak!!
+                        <br>Max ukuran image 3MB</input>
                     </div>
                     
                     <div class="modal-footer">
@@ -146,8 +147,12 @@ For IE support of object-fit add this to your document
             $.ajax({
                 url: form.attr('action'),
                 type: form.attr('method'),
+                data: new FormData(this),
+                processData: false,
+                contentType: false,
+                cache: false,
                 dataType: 'json',
-                data: data,
+                // data: data,
                 success: function(res) {
                     // jika respon -> status = true
                     if (res.status) {
