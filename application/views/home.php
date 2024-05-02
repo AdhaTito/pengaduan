@@ -57,7 +57,7 @@
       <div class="logo">
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1><a href="index.html">NewBiz</a></h1> -->
-        <a href="index.html"><img src="<?= base_url() ?>/aset/img/logo pengaduan.png" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="<?= base_url() ?>/aset/img/logo-website.png" alt="" class="img-fluid mt-2"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -66,7 +66,7 @@
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#services">Prosedur</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="nav-link active" href="<?= base_url() ?>Auth/index">Login</a></li>
+          <li><a class="nav-link active" href="<?= base_url() ?>Auth/index">Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -79,11 +79,11 @@
     <div class="container" data-aos="fade-up">
 
       <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="<?= base_url() ?>/aset/img/logo-jaksel.png" alt="" width="500px" class="img-fluid">
+        <img src="<?= base_url() ?>/aset/img/logo-jaksel.png" alt="" width="450px" class="img-fluid">
       </div>
 
       <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
-        <h2>LAYANAN PENGADUAN <br>ONLINE MASYARAKAT <br> Kelurahan Grogol Utara</h2>
+        <h2>LAYANAN PENGADUAN KEBERSIHAN LINGKUNGAN KELURAHAN GROGOL UATARA</h2>
         <div>
           <a href="Auth" class="btn-services scrollto">Tulis Pengaduan Anda</a>
           <br>
@@ -104,16 +104,16 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header" id="tombol">
-          <h3 class="fs-2 fw-bold">Apa itu LAPOR LURAH?</h3>
+          <h3 class="fs-2 fw-bold">Apa itu LAPOR BERSIH?</h3>
         </header>
 
         <div class="row about-container" id="div">
 
           <div class="col-lg-6 content order-lg-1 order-2">
             <p class="py-5 text-break">
-              Layanan Pengaduan Online Masyarakat (LAPOR) LURAH berbasis web ini merupakan form pengaduan yang di khususkan 
-              untuk warga grogol utara yaitu dalam hal kebersihan, Bencana, 
-              dan hal-hal lain yang berhubungan dengan Pemda Kelurahan Grogol Utara
+              Layanan Pengaduan kebersihan berbasis Website ini diperuntukan bagi masyarakat kelurahan Grogol Utara
+              untuk meningkatkan kualitas hidup bersih, nyaman, dan asri. Website ini diharapkaan dapat menjadi sarana
+              pengaduan masyarakat dalam segala hal kebersihan dilingkungan kelurahan Grogol Utara untuk meningkatkan pola hidup sehat.
             </p>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -131,7 +131,7 @@
           </div>
 
           <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
-            <img src="<?= base_url() ?>/aset/img/lapor 1.png" class="img-fluid rounded rounded-3" alt="">
+            <img src="<?= base_url() ?>/aset/img/img-1.png" class="img-fluid rounded-3" alt="">
           </div>
         </div>
 
@@ -143,7 +143,7 @@
       <div class="container " data-aos="fade-up" >
 
         <header class="section-header">
-          <h3 class="text-white fw-bolder py-5">Prosedur Pengaduan di Website LAPOR LURAH</h3>
+          <h3 class="text-white fw-bolder py-5">Prosedur Pengaduan di Website LAPOR BERSIH</h3>
         </header>
 
         <div class="row justify-content-center pt-3 pb-3">
@@ -203,7 +203,7 @@
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="section-header" id="tombol">
-          <h3>Kontak Kami</h3>
+          <h3>Saran dan Masukan untuk Website ini</h3>
         </div>
 
         <div class="row" id="div">
@@ -266,10 +266,11 @@
         <div class="row">
 
           <div class="col-lg-5 col-md-6 footer-info footer-links">
-            <h3>LAPOR LURAH</h3>
-            <p>Layanan Pengaduan Online Masyarakat (LAPOR) LURAH berbasis web ini merupakan 
-              form pengaduan yang di khususkan untuk warga grogol utara yaitu dalam hal kebersihan,
-              Bencana, dan hal-hal lain yang berhubungan dengan Pemda Kelurahan Grogol Utara</p>
+            <h3>LAPOR BERSIH</h3>
+            <p>Layanan Pengaduan kebersihan berbasis Website ini diperuntukan bagi masyarakat 
+              kelurahan Grogol Utara untuk meningkatkan kualitas hidup bersih, nyaman, dan asri. 
+              Website ini diharapkaan dapat menjadi sarana pengaduan masyarakat dalam segala hal kebersihan 
+              dilingkungan kelurahan Grogol Utara untuk meningkatkan pola hidup sehat.</p>
             <br>
             <ul>
               <li>
@@ -311,7 +312,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>LAPOR LURAH</strong>. All Rights Reserved
+        &copy; Copyright <strong>LAPOR BERSIH</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--

@@ -32,7 +32,8 @@
             <div class="col-lg-12">
                 <!-- Featured blog post-->
                 <div class="card shadow-lg mb-4">
-                    <a href="https://kampungkb.bkkbn.go.id/kampung/2886/kampung-keluarga-berkualitas-kelurahan-grogol-utara" target="_blank"><img class="card-img-top img-card" src="./aset/img/kantor-lurah-gu.jpg"
+                    <a href="https://kampungkb.bkkbn.go.id/kampung/2886/kampung-keluarga-berkualitas-kelurahan-grogol-utara" target="_blank"><img class="card-img-top img-card" 
+                    src="./aset/img/kantor-lurah-gu.jpg"
                             alt="..." /></a>
                     <div class="card-body">
                         <div class="small text-muted">28 Mei 2024</div>

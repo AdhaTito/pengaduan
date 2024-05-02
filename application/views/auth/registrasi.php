@@ -23,7 +23,7 @@
                                   <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control <?= form_error('email') ? 'is-invalid' : 'border-left-primary' ?>" value="<?= set_value('email'); ?>" id="email" name="email" placeholder="Alamat Email" value="<?= set_value('email'); ?>">
+                                  <input type="text" class="form-control <?= form_error('email') ? 'is-invalid' : 'border-left-primary' ?>" value="<?= set_value('email'); ?>" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
                                   <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                               </div>
                               <div class="form-group">
@@ -36,7 +36,7 @@
                                       <?= form_error('pass1', '<small class="text-danger pl-3">', '</small>'); ?>
                                   </div>
                                   <div class="col-sm-6">
-                                      <input type="password" class="form-control <?= form_error('pass2') ? 'is-invalid' : 'border-left-primary' ?>" value="<?= set_value('pass2'); ?>" id="pass2" name="pass2" placeholder="Ulangi Password">
+                                      <input type="password" class="form-control <?= form_error('pass2') ? 'is-invalid' : 'border-left-primary' ?>" value="<?= set_value('pass2'); ?>" id="pass2" name="pass2" placeholder="Konfirmasi Password">
                                       <?= form_error('pass2', '<small class="text-danger pl-3">', '</small>'); ?>
                                   </div>
                               </div>

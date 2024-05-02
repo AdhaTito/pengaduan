@@ -30,7 +30,7 @@
     <div class="container text-white">
 
         <h1 class="display-4">Selamat datang, <?= $user['username']; ?>!</h1>
-        <p class="lead">Selamat datang di Layanan Pengaduan Online Masyarakat Desa, silahkan adukan permasalahan terkait desa Anda kepada kami.</p>
+        <p class="lead">Selamat datang di Layanan Pengaduan Lingkungan Kelurahan Grogol Utara, silahkan adukan permasalahan terkait kebersihan lingkungan Anda kepada kami.</p>
         <hr class="my-4">
         <p>Klik tombol tambah pengaduan berikut untuk mengirimkan data pengaduan terkait permasalahan yang terjadi.</p>
         <button type="button" data-toggle="modal" data-target="#tambah-data" class="btn btn-primary btn-lg" role="button"><i class="fas fa-fw fa-plus"></i> Tambah Pengaduan</button>

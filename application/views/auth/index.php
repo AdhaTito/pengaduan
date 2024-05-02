@@ -38,13 +38,14 @@
                                 <!-- Nested Row within Card Body -->
                                 <div class="row">
                                     <div class="col-lg-5 d-block d-lg-block">
-                                        <img src="<?= base_url(); ?>/assets/img/login.svg" class="m-1" style="width: 100%; height: 100%;">
+                                        <img src="<?= base_url(); ?>/aset/img/logo-website.png" class="m-4 mt-5" style="width: 100%; height: auto;">
+                                        <img src="<?= base_url(); ?>/aset/img/logo-jaksel.png" class="m-4" style="width: 100%; height: auto;">
                                     </div>
 
                                     <div class="col-lg-7">
-                                        <div class="p-5">
+                                        <div class="p-5 mt-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 my-2 mb-4">Layanan Pengaduan Online Kelurahan Grogol Utara</h1>
+                                                <h1 class="h4 text-gray-900 fw-bolder my-2 mb-4">Layanan Pengaduan Kebersihan Kel. Grogol Utara</h1>
                                             </div>
                                             <!-- Show Flash_msg --> 
                                             <?= $this->session->flashdata('message') ?>
@@ -70,11 +71,7 @@
                                                     Login
                                                 </button>
                                                 <?= form_close(); ?>
-                                                <p class="text-center pt-4">Belum punya Akun? Klik tombol Registrasi</p>
-
-                                                <button class="btn btn-warning btn-user btn-block rounded-pill">
-                                                        <a class="text-white text-decoration-none" href="<?= base_url('auth/registrasi'); ?>">Registrasi</a>
-                                                </button>
+                                                <p class="text-center pt-4">Belum punya Akun? <a href="<?= base_url('auth/registrasi'); ?>">Registrasi</a></p>
                                             </form>
                                         </div>
                                     </div>
